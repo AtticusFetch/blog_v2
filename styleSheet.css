@@ -1,0 +1,32 @@
+body {
+    margin: 0 0;
+    opacity: 0;
+    -webkit-transition: opacity 2s ease;
+}
+
+.wrapper {
+    background-color: #202020;
+    font-size: 1em;
+}
+
+.header {
+    align-items: center;
+    background-image: url("http://i.imgur.com/A06GjWA.jpg");
+    text-align: center;
+}
+
+.hiddenTitle {
+    position: absolute;
+    font-size: 4em;
+    font-family: serif;
+    font-weight: 600;
+    text-shadow: -0.02em 0 #02B3FF, 0 0.02em #02B3FF, 0.02em 0 #02B3FF, 0 -0.02em #02B3FF;
+    color: #202020;
+    opacity: 0;
+    margin: 0.15em auto;
+}
+
+.visibleTitle {
+    opacity: 1;
+}
+
