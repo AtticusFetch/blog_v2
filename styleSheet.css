@@ -13,6 +13,7 @@ body {
 .header {
     align-items: center;
     background-image: url("http://i.imgur.com/A06GjWA.jpg");
+    opacity: 0.7;
     text-align: center;
 }
 
@@ -21,11 +22,18 @@ body {
     font-size: 4em;
     font-family: serif;
     font-weight: 600;
-    text-shadow: -0.02em 0 #02B3FF, 0 0.02em #02B3FF, 0.02em 0 #02B3FF, 0 -0.02em #02B3FF;
+    text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;
     color: #202020;
     opacity: 0;
     margin: 0.15em auto;
+    -webkit-animation: blink 1ms 2500 linear;
 }
+
+@-webkit-keyframes blink {
+    from{text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;}
+    50% {text-shadow: none}
+    to {text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;}
+ }
 
 .visibleTitle {
     opacity: 1;
@@ -33,23 +41,29 @@ body {
 
 .menu ul {
     list-style: none inside;
-    margin: 40px 40px;
-    padding-left: 0px;
     float: left;
     position: fixed;
-    border-radius: 20px;
 }
 
 .menu ul li {
     opacity: 0.5;
     zoom: normal;
     padding: 30px 0px;
-    -webkit-transition: opacity 350ms ease-in-out, list-style-image 350ms ease-in-out, zoom 350ms ease, padding 350ms ease-in-out;
+    -webkit-transition: opacity 350ms ease-in-out, list-style-image 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
+}
+
+.rotate {
+    -webkit-animation: rotation 1s ease;
+}
+
+@-webkit-keyframes rotation {
+    from {-webkit-transform: rotateY(0deg);}
+    to {-webkit-transform: rotateY(360deg);}
 }
 
 .menu ul li:hover {
+    -webkit-transform: scale(1.1,1.1);
     opacity: 1;
-    zoom: 110%;
     cursor: pointer;
 }
 
