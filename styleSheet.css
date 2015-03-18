@@ -41,48 +41,34 @@ body {
 }
 
 .menu ul li {
+    opacity: 0.5;
+    zoom: normal;
     padding: 30px 0px;
+    -webkit-transition: opacity 350ms ease-in-out, list-style-image 350ms ease-in-out, zoom 350ms ease, padding 350ms ease-in-out;
 }
 
 .menu ul li:hover {
+    opacity: 1;
+    zoom: 110%;
     cursor: pointer;
 }
 
 .about:hover {
-    -webkit-animation: aboutHover 500ms ease both;
+    list-style-image: url("http://i.imgur.com/Res7Ezp.png");
 }
 
 .contacts:hover {
-    -webkit-animation: contactsHover 500ms ease both;
+    list-style-image: url("http://i.imgur.com/gl5H42q.png");
 }
 
 .photos:hover {
-    -webkit-animation: photosHover 500ms ease both;
+    list-style-image: url("http://i.imgur.com/DSghNrN.png");
 }
 
 .articles:hover {
-    -webkit-animation: articlesHover 500ms ease both;
+    list-style-image: url("http://i.imgur.com/xLflyNh.png");
 }
 
-@-webkit-keyframes aboutHover {
-    from {}
-    to {list-style-image: url("http://i.imgur.com/Res7Ezp.png");}
-}
-
-@-webkit-keyframes contactsHover {
-    from {}
-    to {list-style-image: url("http://i.imgur.com/gl5H42q.png");}
-}
-
-@-webkit-keyframes photosHover {
-    from {}
-    to {list-style-image: url("http://i.imgur.com/DSghNrN.png");}
-}
-
-@-webkit-keyframes articlesHover {
-    from {}
-    to {list-style-image: url("http://i.imgur.com/xLflyNh.png");}
-}
 
 .about {
     list-style-image: url('http://i.imgur.com/ROLrpYO.png');
