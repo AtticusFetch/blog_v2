@@ -24,7 +24,7 @@ function setTitle(titleID){
 function clickMenuItem(){
     $('.wrapper .header').click(function(){
         removeTitle(currentTitle);
-        $('#' + $(this).attr('class') + 'Content').removeClass($(this).attr('class') + 'Visible');
+        $('#' + currentTitle + 'Content').removeClass(currentTitle + 'Visible');
         init();
     });
     $('.wrapper .menu ul li').click(function(){
