@@ -41,9 +41,6 @@ function clickMenuItem(){
 
 
     $('.wrapper .menu ul li').click(function(){
-        //alert(currentTitle);
-        /*currentFontSize = $('#' + currentTitle + 'Content').css('font-size');
-        alert(currentFontSize);*/
         $(this).removeClass('rotate');
         $('#' + currentTitle + 'Content').removeClass(currentTitle + 'Visible');
         $('#' + $(this).attr('class') + 'Content').addClass($(this).attr('class') + 'Visible');
