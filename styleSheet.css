@@ -37,7 +37,6 @@ body {
 }
 
 .hiddenContent {
-
     cursor: default;
     position: absolute;
     opacity: 0;
@@ -50,7 +49,7 @@ body {
 
 }
 
-.aboutVisible {
+.contentVisible {
     font-size: 3em;
     opacity: 1;
     text-align: center;

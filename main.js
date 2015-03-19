@@ -12,6 +12,12 @@ $(document).ready(function(){
 function init(){
     $('body').css('opacity','1');
     setTitle('main');
+    $('#mainContent').addClass('contentVisible')
+        .css('font-size', parseFloat($('#mainContent').css('font-size'))*($(window).width()/1920))
+        .css('left', ($(window).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2 +'px')
+        .css('right',($(window).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2 + 'px');
+    indent = ($(window).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2;
+    currentFontSize = 6*parseFloat($('#' + currentTitle + 'Content').css('font-size'));
     $('.header').css('height',$('.wrapper .header #' + currentTitle).outerHeight(true) + 'px');
 }
 
@@ -35,17 +41,17 @@ function clickMenuItem(){
 
     $('.wrapper .header').click(function(){
         removeTitle(currentTitle);
-        $('#' + currentTitle + 'Content').removeClass(currentTitle + 'Visible');
+        $('#' + currentTitle + 'Content').removeClass('contentVisible');
         init();
     });
 
 
     $('.wrapper .menu ul li').click(function(){
         $(this).removeClass('rotate');
-        $('#' + currentTitle + 'Content').removeClass(currentTitle + 'Visible');
-        $('#' + $(this).attr('class') + 'Content').addClass($(this).attr('class') + 'Visible')
-            .css('font-size', 2.5*parseFloat($(this).css('font-size'))*($(window).width()/1920));
-        $('#' + $(this).attr('class') + 'Content').css('left', ($(window).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2 +'px')
+        $('#' + currentTitle + 'Content').removeClass('contentVisible');
+        $('#' + $(this).attr('class') + 'Content').addClass('contentVisible')
+            .css('font-size', 2.5*parseFloat($(this).css('font-size'))*($(window).width()/1920))
+            .css('left', ($(window).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2 +'px')
             .css('right',($(window).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2 + 'px');
         indent = ($(window).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2;
         removeTitle(currentTitle);
