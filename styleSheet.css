@@ -3,11 +3,13 @@ body {
     opacity: 0;
     -webkit-transition: opacity 2s ease;
     background-color: #202020;
+
 }
 
 .wrapper {
     background-color: #202020;
     font-size: 1em;
+    min-width: 845px;
 }
 
 .header {
@@ -35,6 +37,7 @@ body {
 }
 
 .hiddenContent {
+
     cursor: default;
     position: absolute;
     opacity: 0;
@@ -48,8 +51,8 @@ body {
 }
 
 .aboutVisible {
+    font-size: 3em;
     opacity: 1;
-    font-size: 300%;
     text-align: center;
     font-family: serif;
     font-weight: 200;

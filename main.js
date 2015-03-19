@@ -1,6 +1,7 @@
 var currentTitle = '';
 var currentWidth;
 var currentFontSize;
+var indent;
 
 $(document).ready(function(){
     init();
@@ -15,19 +16,18 @@ function init(){
 }
 
 function setTitle(titleID){
-    currentWidth = $(window).width();
     currentTitle = titleID;
     $('.wrapper .header #' + titleID).addClass('visibleTitle')
         .css({left: ($('.header').outerWidth(true) - $(this).outerWidth(true))/2})
             .css({right: ($('.header').outerWidth(true) - $(this).outerWidth(true))/2});
-
-
 }
 
 function fontResize(){
-    currentWidth = $(window).width();
+    currentWidth = parseFloat($(window).width());
     $(window).resize(function() {
-        $('#' + currentTitle + 'Content').css('font-size', parseInt(currentFontSize)*($(window).width()/parseInt(currentWidth)));
+        $('#' + currentTitle + 'Content').css('font-size', currentFontSize*(($(window).width()/currentWidth)))
+            .css('left', indent*($(window).width()/currentWidth)  + 'px')
+                .css('right', indent*($(window).width()/currentWidth) + 'px');
     });
 }
 
@@ -43,14 +43,16 @@ function clickMenuItem(){
     $('.wrapper .menu ul li').click(function(){
         $(this).removeClass('rotate');
         $('#' + currentTitle + 'Content').removeClass(currentTitle + 'Visible');
-        $('#' + $(this).attr('class') + 'Content').addClass($(this).attr('class') + 'Visible');
+        $('#' + $(this).attr('class') + 'Content').addClass($(this).attr('class') + 'Visible')
+            .css('font-size', 2.5*parseFloat($(this).css('font-size'))*($(window).width()/1920));
         $('#' + $(this).attr('class') + 'Content').css('left', ($(window).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2 +'px')
             .css('right',($(window).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2 + 'px');
+        indent = ($(window).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2;
         removeTitle(currentTitle);
         setTitle($(this).attr('class'));
         $(this).addClass('rotate')
             .mouseout(function(){
-                currentFontSize = $('#' + currentTitle + 'Content').css('font-size');
+                currentFontSize = parseFloat($('#' + currentTitle + 'Content').css('font-size'));
             });
     });
 }
