@@ -9,13 +9,9 @@ function init(){
     $('body').css('opacity','1');
     setTitle('main');
     $('.header').css('height',$('.wrapper .header #' + currentTitle).outerHeight(true) + 'px');
-    $('.wrapper .container .aboutContent').addClass('aboutVisible')
             /*.css({left: $('.wrapper .menu ul').outerWidth(true)})
-                .css({right: 'auto'})*/;
-    alert($('.wrapper .menu ul li').outerWidth(true));
-    $('.wrapper .container').css({left: ($('.header').outerWidth(true) - $('.wrapper .container').outerWidth(true))/2 + $('.wrapper .menu ul li').outerWidth(true)})
-        .css({right: ($('.header').outerWidth(true) - $(this).outerWidth(true))/2});
-
+                .css({right: 'auto'})*/
+    //alert($('.wrapper .menu ul li').outerWidth(true));
 }
 
 function setTitle(titleID){
@@ -28,9 +24,14 @@ function setTitle(titleID){
 function clickMenuItem(){
     $('.wrapper .header').click(function(){
         removeTitle(currentTitle);
+        $('#' + $(this).attr('class') + 'Content').removeClass($(this).attr('class') + 'Visible');
         init();
     });
     $('.wrapper .menu ul li').click(function(){
+        //alert($(this).attr('class'));
+        $('#' + $(this).attr('class') + 'Content').addClass($(this).attr('class') + 'Visible');
+        $('#' + $(this).attr('class') + 'Content').css('left', ($(document).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2 +'px')
+            .css('right',($(document).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2 + 'px');
         removeTitle(currentTitle);
         setTitle($(this).attr('class'));
         $(this).addClass('rotate')
