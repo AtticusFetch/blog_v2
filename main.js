@@ -29,6 +29,7 @@ function clickMenuItem(){
     });
     $('.wrapper .menu ul li').click(function(){
         //alert($(this).attr('class'));
+        $('#' + currentTitle + 'Content').removeClass(currentTitle + 'Visible');
         $('#' + $(this).attr('class') + 'Content').addClass($(this).attr('class') + 'Visible');
         $('#' + $(this).attr('class') + 'Content').css('left', ($(document).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2 +'px')
             .css('right',($(document).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2 + 'px');
