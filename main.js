@@ -1,8 +1,20 @@
 var currentTitle = '';
+var clicked = false;
 
 $(document).ready(function(){
     init();
     clickMenuItem();
+
+    $('.photoGrid img').click(function(){
+        if(!clicked) {
+            $(this).addClass('imageInc');
+            clicked = true;
+        } else {
+            $(this).removeClass('imageInc');
+            clicked = false;
+        }
+    });
+
 });
 
 function init(){
@@ -39,7 +51,6 @@ function clickMenuItem(){
         } else {
             $('body').css('overflow', 'hidden')
         }
-        console.log('#' + $(this).attr('class') + 'Content');
         $(this).addClass('rotate');
 
 
