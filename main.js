@@ -4,6 +4,7 @@ var clicked = false;
 $(document).ready(function(){
     init();
     clickMenuItem();
+    loadImages();
 
     $('.photoGrid img').click(function(){
         if(!clicked) {
@@ -14,14 +15,39 @@ $(document).ready(function(){
             clicked = false;
         }
     });
-
 });
+
+/*function centrify(currImg){
+    if(true){
+        $(currImg).css('-webkit-transform-origin', '0% 0%')
+    } else if(true) {
+        $(currImg).css('-webkit-transform-origin', '50% 0%')
+    } else if(true) {
+        $(currImg).css('-webkit-transform-origin', '100% 0%')
+    } else if(true) {
+        $(currImg).css('-webkit-transform-origin', '100% 50%')
+    } else if(true) {
+        $(currImg).css('-webkit-transform-origin', '100% 100%')
+    } else if(true) {
+        $(currImg).css('-webkit-transform-origin', '50% 100%')
+    } else if(true) {
+        $(currImg).css('-webkit-transform-origin', '0% 100%')
+    } else if(true) {
+        $(currImg).css('-webkit-transform-origin', '0% 50%')
+    }
+}*/
 
 function init(){
     $('body').css('opacity','1');
     setTitle('main');
     $('#mainContent').addClass('contentVisible');
     $('.header').css('height',$('.wrapper .header #' + currentTitle).outerHeight(true) + 'px');
+}
+
+function loadImages() {
+    for (var i = 1; i <= 10; i++){
+        $('.photoElement').prepend('<img src="resources\\photos\\'+ i +'.jpg">')
+    }
 }
 
 function setTitle(titleID){
@@ -38,9 +64,6 @@ function clickMenuItem(){
     });
 
     $('.wrapper .menu ul li').click(function(){
-        /***********************************************************
-        Fix icons rotation
-        ***********************************************************/
         $(this).removeClass('rotate');
         $('#' + currentTitle + 'Content').removeClass('contentVisible');
         $('#' + $(this).attr('class') + 'Content').addClass('contentVisible');
