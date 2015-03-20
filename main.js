@@ -34,7 +34,15 @@ function clickMenuItem(){
         $('#' + $(this).attr('class') + 'Content').addClass('contentVisible');
         removeTitle(currentTitle);
         setTitle($(this).attr('class'));
-        $(this).addClass('rotate')
+        if ($('#' + $(this).attr('class') + 'Content').outerHeight() > $(window).height()) {
+            $('body').css('overflow', 'visible')
+        } else {
+            $('body').css('overflow', 'hidden')
+        }
+        console.log('#' + $(this).attr('class') + 'Content');
+        $(this).addClass('rotate');
+
+
     });
 }
 

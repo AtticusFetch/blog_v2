@@ -3,7 +3,7 @@ body {
     opacity: 0;
     -webkit-transition: opacity 2s ease;
     background-color: #202020;
-
+    overflow: hidden;
 }
 
 .wrapper {
@@ -41,7 +41,6 @@ body {
     cursor: default;
     position: absolute;
     opacity: 0;
-   /* float: left;*/
     color: #202020;
     -webkit-transition: opacity 500ms ease-in-out, font-size 500ms ease-in-out 1s;
     left: 20%;
@@ -61,11 +60,6 @@ body {
 #contactsContent ul {
     list-style: none inside;
 }
-
-/*#contactsContent ul li {
-    float:left;
-    padding-left: 1%;
-}*/
 
 @-webkit-keyframes blink {
     from{text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;}
@@ -108,11 +102,20 @@ body {
     cursor: pointer;
 }
 
+#mainContent .image{
+    box-shadow: inset -1em 1em 0.5em #202020, inset 0 1em 1em #202020, inset 1em 1em #202020, inset 0 -1em 1em #202020;
+}
+
 #mainContent .image img {
     border-radius: 10%;
-    box-shadow: inset -1em 1em #202020, inset 0 1em 1em #202020, inset 1em 1em #202020, inset 0 -1em 1em #202020;
+    box-shadow: inset -1em 1em 0.5em #202020, inset 0 1em 1em #202020, inset 1em 1em #202020, inset 0 -1em 1em #202020;
     position: relative;
     -webkit-transition: opacity 500ms ease-in-out, -webkit-transform 1s ease-in-out;
+}
+
+.photoElement img {
+    border-radius: 10%;
+    width: 100%;
 }
 
 .about:hover {
