@@ -8,7 +8,7 @@ body {
 
 .wrapper {
     background-color: #202020;
-    font-size: 1em;
+    font-size: 100%;
 }
 
 .header {
@@ -24,7 +24,7 @@ body {
 
 .hiddenTitle {
     position: absolute;
-    font-size: 4em;
+    font-size: 400%;
     font-family: serif;
     font-weight: 600;
     text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;
@@ -102,8 +102,8 @@ body {
     cursor: pointer;
 }
 
-#mainContent .image{
-    box-shadow: inset -1em 1em 0.5em #202020, inset 0 1em 1em #202020, inset 1em 1em #202020, inset 0 -1em 1em #202020;
+#mainContent .image img{
+
 }
 
 #mainContent .image img {
@@ -131,7 +131,8 @@ body {
     -webkit-transition: -webkit-transform 250ms ease, max-width 0.5s ease-in-out;
 }
 
-.photoElement img:hover {
+
+.contentVisible .photoElement img:hover {
     cursor: pointer;
     -webkit-transform: scale(1.5);
 }
@@ -181,26 +182,26 @@ body {
 
 @media screen and (min-width: 1400px) {
     .contentVisible {
-        font-size: 3em;
+        font-size: 300%;
         opacity: 1;
         -webkit-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
     }
 
     .visibleTitle {
-        font-size: 3.5em;
+        font-size: 350%;
         opacity: 1;
     }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px){
     .contentVisible {
-        font-size: 2.5em;
+        font-size: 250%;
         opacity: 1;
         -webkit-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
     }
 
     .visibleTitle {
-        font-size: 3em;
+        font-size: 300%;
         opacity: 1;
     }
 
@@ -212,13 +213,13 @@ body {
 
 @media screen and (min-width: 1000px) and (max-width: 1200px) {
     .contentVisible {
-        font-size: 2em;
+        font-size: 200%;
         opacity: 1;
         -webkit-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
     }
 
     .visibleTitle {
-        font-size: 2.5em;
+        font-size: 250%;
         opacity: 1;
     }
     #mainContent .image {
@@ -229,13 +230,13 @@ body {
 
 @media screen and (max-width: 1000px) {
     .contentVisible {
-        font-size: 1.5em;
+        font-size: 150%;
         opacity: 1;
         -webkit-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
     }
 
     .visibleTitle {
-        font-size: 2em;
+        font-size: 200%;
         opacity: 1;
     }
     #mainContent .image {

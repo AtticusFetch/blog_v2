@@ -17,26 +17,6 @@ $(document).ready(function(){
     });
 });
 
-/*function centrify(currImg){
-    if(true){
-        $(currImg).css('-webkit-transform-origin', '0% 0%')
-    } else if(true) {
-        $(currImg).css('-webkit-transform-origin', '50% 0%')
-    } else if(true) {
-        $(currImg).css('-webkit-transform-origin', '100% 0%')
-    } else if(true) {
-        $(currImg).css('-webkit-transform-origin', '100% 50%')
-    } else if(true) {
-        $(currImg).css('-webkit-transform-origin', '100% 100%')
-    } else if(true) {
-        $(currImg).css('-webkit-transform-origin', '50% 100%')
-    } else if(true) {
-        $(currImg).css('-webkit-transform-origin', '0% 100%')
-    } else if(true) {
-        $(currImg).css('-webkit-transform-origin', '0% 50%')
-    }
-}*/
-
 function init(){
     $('body').css('opacity','1');
     setTitle('main');
