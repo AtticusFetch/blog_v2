@@ -32,7 +32,7 @@ body {
     opacity: 0;
     margin: 0.15em auto;
     -webkit-animation: blink 1ms 2500 linear;
-    -webkit-transition: opacity 500ms ease-in-out;
+    -webkit-transition: opacity 500ms ease-in-out, font-size 500ms ease-in-out 500ms;
     left: 20%;
     right: 20%;
 }
@@ -41,9 +41,17 @@ body {
     cursor: default;
     position: absolute;
     opacity: 0;
-    float: left;
+   /* float: left;*/
     color: #202020;
-    -webkit-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
+    -webkit-transition: opacity 500ms ease-in-out, font-size 500ms ease-in-out 1s;
+    left: 20%;
+    right: 20%;
+    text-align: center;
+    font-family: serif;
+    font-weight: 200;
+    text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;
+    max-width: 70%;
+    margin-top: 40px;
 }
 
 .container {
@@ -52,8 +60,12 @@ body {
 
 #contactsContent ul {
     list-style: none inside;
-    float: left;
 }
+
+/*#contactsContent ul li {
+    float:left;
+    padding-left: 1%;
+}*/
 
 @-webkit-keyframes blink {
     from{text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;}
@@ -80,7 +92,7 @@ body {
 }
 
 .rotate {
-    -webkit-animation: rotation 1s ease;
+    -webkit-animation: rotation 1s ease alternate;
 }
 
 @-webkit-keyframes rotation {
@@ -88,10 +100,19 @@ body {
     to {-webkit-transform: rotateY(360deg);}
 }
 
+
+
 .menu ul li:hover {
     -webkit-transform: scale(1.1,1.1);
     opacity: 1;
     cursor: pointer;
+}
+
+#mainContent .image img {
+    border-radius: 10%;
+    box-shadow: inset -1em 1em #202020, inset 0 1em 1em #202020, inset 1em 1em #202020, inset 0 -1em 1em #202020;
+    position: relative;
+    -webkit-transition: opacity 500ms ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
 .about:hover {
@@ -131,71 +152,64 @@ body {
     .contentVisible {
         font-size: 3em;
         opacity: 1;
-        text-align: center;
-        font-family: serif;
-        font-weight: 200;
-        text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;
-        color: #202020;
-        max-width: 70%;
-        margin-top: 40px;
-        left: 20%;
-        right: 20%;
+        -webkit-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
     }
 
     .visibleTitle {
         font-size: 3.5em;
         opacity: 1;
-        -webkit-transition: opacity 500ms ease-in-out;
-        left: 20%;
-        right: 20%;
     }
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1400px) {
+@media screen and (min-width: 1200px) and (max-width: 1400px){
     .contentVisible {
         font-size: 2.5em;
         opacity: 1;
-        text-align: center;
-        font-family: serif;
-        font-weight: 200;
-        text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;
-        color: #202020;
-        max-width: 70%;
-        margin-top: 40px;
-        left: 20%;
-        right: 20%;
+        -webkit-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
     }
 
     .visibleTitle {
         font-size: 3em;
         opacity: 1;
-        -webkit-transition: opacity 500ms ease-in-out;
-        left: 20%;
-        right: 20%;
+    }
+
+    #mainContent .image {
+        -webkit-transform: scale(0.8);
+        top: 20%;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    .contentVisible {
+        font-size: 2em;
+        opacity: 1;
+        -webkit-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
+    }
+
+    .visibleTitle {
+        font-size: 2.5em;
+        opacity: 1;
+    }
+    #mainContent .image {
+        -webkit-transform: scale(0.7);
+        top: 20%;
     }
 }
 
 @media screen and (max-width: 1000px) {
     .contentVisible {
-        font-size: 2em;
+        font-size: 1.5em;
         opacity: 1;
-        text-align: center;
-        font-family: serif;
-        font-weight: 200;
-        text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;
-        color: #202020;
-        max-width: 70%;
-        margin-top: 40px;
-        left: 20%;
-        right: 20%;
+        -webkit-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
     }
 
     .visibleTitle {
         font-size: 2em;
         opacity: 1;
-        -webkit-transition: opacity 500ms ease-in-out;
-        left: 20%;
-        right: 20%;
+    }
+    #mainContent .image {
+        -webkit-transform: scale(0.6);
+        top: 20%;
     }
 }
 

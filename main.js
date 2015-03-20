@@ -26,16 +26,15 @@ function clickMenuItem(){
     });
 
     $('.wrapper .menu ul li').click(function(){
-        console.log('1' + $(this).attr('class'));
+        /***********************************************************
+        Fix icons rotation
+        ***********************************************************/
         $(this).removeClass('rotate');
-        console.log('2' + $(this).attr('class'));
         $('#' + currentTitle + 'Content').removeClass('contentVisible');
         $('#' + $(this).attr('class') + 'Content').addClass('contentVisible');
         removeTitle(currentTitle);
         setTitle($(this).attr('class'));
-        console.log('3' + $(this).attr('class'));
         $(this).addClass('rotate')
-        console.log('4' + $(this).attr('class'));
     });
 }
 
