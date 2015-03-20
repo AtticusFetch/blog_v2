@@ -6,36 +6,31 @@ var indent;
 $(document).ready(function(){
     init();
     clickMenuItem();
-    fontResize();
+    //fontResize();
+    console.log('current font-size 1'+parseFloat($('#mainContent').css('font-size')));
 });
 
 function init(){
     $('body').css('opacity','1');
     setTitle('main');
-    $('#mainContent').addClass('contentVisible')
-        .css('font-size', parseFloat($('#mainContent').css('font-size'))*($(window).width()/1920))
-        .css('left', ($(window).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2 +'px')
-        .css('right',($(window).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2 + 'px');
-    indent = ($(window).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2;
-    currentFontSize = 6*parseFloat($('#' + currentTitle + 'Content').css('font-size'));
+    console.log('current font-size 2'+parseFloat($('#mainContent').css('font-size')));
+    $('#mainContent').addClass('contentVisible');
     $('.header').css('height',$('.wrapper .header #' + currentTitle).outerHeight(true) + 'px');
 }
 
 function setTitle(titleID){
     currentTitle = titleID;
-    $('.wrapper .header #' + titleID).addClass('visibleTitle')
-        .css({left: ($('.header').outerWidth(true) - $(this).outerWidth(true))/2})
-            .css({right: ($('.header').outerWidth(true) - $(this).outerWidth(true))/2});
+    $('.wrapper .header #' + titleID).addClass('visibleTitle');
 }
 
-function fontResize(){
+/*function fontResize(){
     currentWidth = parseFloat($(window).width());
     $(window).resize(function() {
         $('#' + currentTitle + 'Content').css('font-size', currentFontSize*(($(window).width()/currentWidth)))
             .css('left', indent*($(window).width()/currentWidth)  + 'px')
                 .css('right', indent*($(window).width()/currentWidth) + 'px');
     });
-}
+}*/
 
 function clickMenuItem(){
 
@@ -45,21 +40,20 @@ function clickMenuItem(){
         init();
     });
 
-
     $('.wrapper .menu ul li').click(function(){
         $(this).removeClass('rotate');
         $('#' + currentTitle + 'Content').removeClass('contentVisible');
-        $('#' + $(this).attr('class') + 'Content').addClass('contentVisible')
-            .css('font-size', 2.5*parseFloat($(this).css('font-size'))*($(window).width()/1920))
-            .css('left', ($(window).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2 +'px')
-            .css('right',($(window).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2 + 'px');
-        indent = ($(window).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2;
+        $('#' + $(this).attr('class') + 'Content').addClass('contentVisible');
+            //.css('font-size', 2.5*parseFloat($(this).css('font-size'))*($(window).width()/1920))
+            //.css('left', ($(window).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2 +'px')
+            //.css('right',($(window).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2 + 'px');
+        //indent = ($(window).width() - $('#' + $(this).attr('class') + 'Content').outerWidth())/2;
         removeTitle(currentTitle);
         setTitle($(this).attr('class'));
-        $(this).addClass('rotate')
-            .mouseout(function(){
+        $(this).addClass('rotate');
+            /*.mouseout(function(){
                 currentFontSize = parseFloat($('#' + currentTitle + 'Content').css('font-size'));
-            });
+            });*/
     });
 }
 
