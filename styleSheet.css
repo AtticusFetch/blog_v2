@@ -35,6 +35,7 @@ body {
     -webkit-transition: opacity 500ms ease-in-out, font-size 500ms ease-in-out 500ms;
     left: 20%;
     right: 20%;
+    visibility: hidden;
 }
 
 .hiddenContent {
@@ -51,6 +52,7 @@ body {
     text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;
     max-width: 70%;
     margin-top: 40px;
+    visibility: hidden;
 }
 
 .container {
@@ -185,11 +187,13 @@ body {
         font-size: 300%;
         opacity: 1;
         -webkit-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
+        visibility: visible;
     }
 
     .visibleTitle {
         font-size: 350%;
         opacity: 1;
+        visibility: visible;
     }
 }
 
@@ -198,11 +202,13 @@ body {
         font-size: 250%;
         opacity: 1;
         -webkit-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
+        visibility: visible;
     }
 
     .visibleTitle {
         font-size: 300%;
         opacity: 1;
+        visibility: visible;
     }
 
     #mainContent .image {
@@ -216,11 +222,13 @@ body {
         font-size: 200%;
         opacity: 1;
         -webkit-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
+        visibility: visible;
     }
 
     .visibleTitle {
         font-size: 250%;
         opacity: 1;
+        visibility: visible;
     }
     #mainContent .image {
         -webkit-transform: scale(0.7);
@@ -233,11 +241,13 @@ body {
         font-size: 150%;
         opacity: 1;
         -webkit-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
+        visibility: visible;
     }
 
     .visibleTitle {
         font-size: 200%;
         opacity: 1;
+        visibility: visible;
     }
     #mainContent .image {
         -webkit-transform: scale(0.6);
