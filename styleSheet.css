@@ -33,6 +33,8 @@ body {
     margin: 0.15em auto;
     -webkit-animation: blink 1ms 2500 linear;
     -webkit-transition: opacity 500ms ease-in-out;
+    left: 20%;
+    right: 20%;
 }
 
 .hiddenContent {
@@ -46,78 +48,6 @@ body {
 
 .container {
 
-}
-
-@media screen and (min-width: 1400px) {
-    .contentVisible {
-        font-size: 3em;
-        opacity: 1;
-        text-align: center;
-        font-family: serif;
-        font-weight: 200;
-        text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;
-        color: #202020;
-        max-width: 70%;
-        margin-top: 40px;
-        left: 20%;
-        right: 20%;
-    }
-
-    .visibleTitle {
-        font-size: 3.5em;
-        opacity: 1;
-        -webkit-transition: opacity 500ms ease-in-out;
-        left: 20%;
-        right: 20%;
-    }
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1400px) {
-    .contentVisible {
-        font-size: 2.5em;
-        opacity: 1;
-        text-align: center;
-        font-family: serif;
-        font-weight: 200;
-        text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;
-        color: #202020;
-        max-width: 70%;
-        margin-top: 40px;
-        left: 20%;
-        right: 20%;
-    }
-
-    .visibleTitle {
-        font-size: 3em;
-        opacity: 1;
-        -webkit-transition: opacity 500ms ease-in-out;
-        left: 20%;
-        right: 20%;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .contentVisible {
-        font-size: 2em;
-        opacity: 1;
-        text-align: center;
-        font-family: serif;
-        font-weight: 200;
-        text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;
-        color: #202020;
-        max-width: 70%;
-        margin-top: 40px;
-        left: 20%;
-        right: 20%;
-    }
-
-    .visibleTitle {
-        font-size: 2em;
-        opacity: 1;
-        -webkit-transition: opacity 500ms ease-in-out;
-        left: 20%;
-        right: 20%;
-    }
 }
 
 #contactsContent ul {
@@ -195,5 +125,77 @@ body {
 
 .articles{
     list-style-image: url("http://i.imgur.com/O937sfa.png");
+}
+
+@media screen and (min-width: 1400px) {
+    .contentVisible {
+        font-size: 3em;
+        opacity: 1;
+        text-align: center;
+        font-family: serif;
+        font-weight: 200;
+        text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;
+        color: #202020;
+        max-width: 70%;
+        margin-top: 40px;
+        left: 20%;
+        right: 20%;
+    }
+
+    .visibleTitle {
+        font-size: 3.5em;
+        opacity: 1;
+        -webkit-transition: opacity 500ms ease-in-out;
+        left: 20%;
+        right: 20%;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
+    .contentVisible {
+        font-size: 2.5em;
+        opacity: 1;
+        text-align: center;
+        font-family: serif;
+        font-weight: 200;
+        text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;
+        color: #202020;
+        max-width: 70%;
+        margin-top: 40px;
+        left: 20%;
+        right: 20%;
+    }
+
+    .visibleTitle {
+        font-size: 3em;
+        opacity: 1;
+        -webkit-transition: opacity 500ms ease-in-out;
+        left: 20%;
+        right: 20%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .contentVisible {
+        font-size: 2em;
+        opacity: 1;
+        text-align: center;
+        font-family: serif;
+        font-weight: 200;
+        text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;
+        color: #202020;
+        max-width: 70%;
+        margin-top: 40px;
+        left: 20%;
+        right: 20%;
+    }
+
+    .visibleTitle {
+        font-size: 2em;
+        opacity: 1;
+        -webkit-transition: opacity 500ms ease-in-out;
+        left: 20%;
+        right: 20%;
+    }
 }
 
