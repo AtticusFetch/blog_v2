@@ -111,6 +111,7 @@ body {
 #mainContent .image img {
     border-radius: 10%;
     position: relative;
+    box-shadow: 3px 3px 40px aqua, 3px -3px 40px aqua, -3px 3px 40px aqua, 0 3px 40px aqua, 3px 0 40px aqua, 0 -3px 40px aqua, -3px 0 40px aqua;
     -webkit-transition: opacity 500ms ease-in-out, -webkit-transform 1s ease-in-out, max-width 1s ease-in-out;
 }
 
@@ -135,6 +136,7 @@ body {
 
 
 .contentVisible .photoElement img:hover {
+    box-shadow: 3px 3px 10px aqua, 3px -3px 10px aqua, -3px 3px 10px aqua, 0 3px 10px aqua, 3px 0 10px aqua, 0 -3px 10px aqua, -3px 0 10px aqua;
     cursor: pointer;
     -webkit-transform: scale(1.5);
 }
