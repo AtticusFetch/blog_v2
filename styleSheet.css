@@ -131,7 +131,7 @@ body {
     float: left;
     display: inline-block;
     max-width: 30%;
-    -webkit-transition: -webkit-transform 250ms ease, max-width 0.5s ease-in-out;
+    -webkit-transition: -webkit-transform 250ms ease, max-width 0.5s ease-in-out, box-shadow 250ms ease;
 }
 
 
