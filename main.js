@@ -40,12 +40,14 @@ function setTitle(titleID){
 function clickMenuItem(){
 
     $('.wrapper .header').click(function(){
+        $('body').animate({ scrollTop: 0 }, 'slow');
         removeTitle(currentTitle);
         $('#' + currentTitle + 'Content').removeClass('contentVisible');
         init();
     });
 
     $('.wrapper .menu ul li').click(function(){
+        $('body').animate({ scrollTop: 0 }, 'slow');
         $(this).removeClass('rotate');
         $('#' + currentTitle + 'Content').removeClass('contentVisible');
         $('#' + $(this).attr('class') + 'Content').addClass('contentVisible');
