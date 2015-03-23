@@ -9,9 +9,11 @@ $(document).ready(function(){
     $('.photoGrid img').click(function(){
         if(!clicked) {
             $(this).addClass('imageInc');
+            $('body').css('overflow', 'visible');
             clicked = true;
         } else {
             $(this).removeClass('imageInc');
+            $('body').css('overflow', 'hidden');
             clicked = false;
         }
     });
@@ -50,7 +52,7 @@ function clickMenuItem(){
         removeTitle(currentTitle);
         setTitle($(this).attr('class'));
         if ($('#' + $(this).attr('class') + 'Content').outerHeight() > $(window).height()) {
-            $('body').css('overflow', 'visible')
+            $('body').css('overflow', 'visible');
         } else {
             $('body').css('overflow', 'hidden')
         }
