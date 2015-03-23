@@ -2,6 +2,8 @@ body {
     margin: 0 0;
     opacity: 0;
     -webkit-transition: opacity 2s ease;
+    -moz-transition: opacity 2s ease;
+    -o-transition: opacity 2s ease;
     background-color: #202020;
     overflow: hidden;
 }
@@ -33,6 +35,10 @@ body {
     margin: 0.15em auto;
     -webkit-animation: blink 1ms 2500 linear;
     -webkit-transition: opacity 500ms ease-in-out, font-size 500ms ease-in-out 500ms;
+    -moz-animation: blink 1ms 2500 linear;
+    -o-transition: opacity 500ms ease-in-out, font-size 500ms ease-in-out 500ms;
+    -moz-animation: blink 1ms 2500 linear;
+    -o-transition: opacity 500ms ease-in-out, font-size 500ms ease-in-out 500ms;
     left: 20%;
     right: 20%;
     visibility: hidden;
@@ -44,6 +50,8 @@ body {
     opacity: 0;
     color: #202020;
     -webkit-transition: opacity 500ms ease-in-out, font-size 500ms ease-in-out 1s;
+    -moz-transition: opacity 500ms ease-in-out, font-size 500ms ease-in-out 1s;
+    -o-transition: opacity 500ms ease-in-out, font-size 500ms ease-in-out 1s;
     left: 20%;
     right: 20%;
     text-align: center;
@@ -69,9 +77,23 @@ body {
     to {text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;}
  }
 
+@-moz-keyframes blink {
+    from{text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;}
+    50% {text-shadow: none}
+    to {text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;}
+}
+
+@-o-keyframes blink {
+    from{text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;}
+    50% {text-shadow: none}
+    to {text-shadow: -0.02em 0.05em #02B3FF, 0 0.02em 0.05em #02B3FF, 0.02em 0.05em #02B3FF, 0 -0.02em 0.05em #02B3FF;}
+}
+
 .visibleTitle {
     opacity: 1;
     -webkit-transition: opacity 500ms ease-in-out;
+    -o-transition: opacity 500ms ease-in-out;
+    -moz-transition: opacity 500ms ease-in-out;
 }
 
 .menu ul {
@@ -85,10 +107,14 @@ body {
     zoom: normal;
     padding: 30px 0px;
     -webkit-transition: opacity 350ms ease-in-out, list-style-image 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
+    -moz-transition: opacity 350ms ease-in-out, list-style-image 350ms ease-in-out, -moz-transform 350ms ease-in-out;
+    -o-transition: opacity 350ms ease-in-out, list-style-image 350ms ease-in-out, -o-transform 350ms ease-in-out;
 }
 
 .rotate {
     -webkit-animation: rotation 1s ease alternate;
+    -moz-animation: rotation 1s ease alternate;
+    -o-animation: rotation 1s ease alternate;
 }
 
 @-webkit-keyframes rotation {
@@ -96,10 +122,22 @@ body {
     to {-webkit-transform: rotateY(360deg);}
 }
 
+@-moz-keyframes rotation {
+    from {-moz-transform: rotateY(0deg);}
+    to {-moz-transform: rotateY(360deg);}
+}
+
+@-o-keyframes rotation {
+    from {o-transform: rotateY(0deg);}
+    to {-o-transform: rotateY(360deg);}
+}
+
 
 
 .menu ul li:hover {
     -webkit-transform: scale(1.1,1.1);
+    -moz-transform: scale(1.1,1.1);
+    -o-transform: scale(1.1,1.1);
     opacity: 1;
     cursor: pointer;
 }
@@ -113,6 +151,8 @@ body {
     position: relative;
     box-shadow: 3px 3px 40px aqua, 3px -3px 40px aqua, -3px 3px 40px aqua, 0 3px 40px aqua, 3px 0 40px aqua, 0 -3px 40px aqua, -3px 0 40px aqua;
     -webkit-transition: opacity 500ms ease-in-out, -webkit-transform 1s ease-in-out, max-width 1s ease-in-out;
+    -moz-transition: opacity 500ms ease-in-out, -moz-transform 1s ease-in-out, max-width 1s ease-in-out;
+    -o-transition: opacity 500ms ease-in-out, -o-transform 1s ease-in-out, max-width 1s ease-in-out;
 }
 
 .photoGrid {
@@ -132,6 +172,8 @@ body {
     display: inline-block;
     max-width: 30%;
     -webkit-transition: -webkit-transform 250ms ease, max-width 0.5s ease-in-out, box-shadow 250ms ease;
+    -moz-transition: -moz-transform 250ms ease, max-width 0.5s ease-in-out, box-shadow 250ms ease;
+    -o-transition: -o-transform 250ms ease, max-width 0.5s ease-in-out, box-shadow 250ms ease;
 }
 
 
@@ -139,14 +181,28 @@ body {
     box-shadow: 3px 3px 10px aqua, 3px -3px 10px aqua, -3px 3px 10px aqua, 0 3px 10px aqua, 3px 0 10px aqua, 0 -3px 10px aqua, -3px 0 10px aqua;
     cursor: pointer;
     -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
 }
 
 .imageInc {
     -webkit-transition: -webkit-transform 250ms ease, max-width 0.5s ease-in-out;
+    -moz-transition: -moz-transform 250ms ease, max-width 0.5s ease-in-out;
+    -o-transition: -o-transform 250ms ease, max-width 0.5s ease-in-out;
     -webkit-animation: imgView 1s ease both;
+    -moz-animation: imgView 1s ease both;
+    -o-animation: imgView 1s ease both;
 }
 
 @-webkit-keyframes imgView {
+    from {}
+    to{max-width: 90%;}
+}
+@-moz-keyframes imgView {
+    from {}
+    to{max-width: 90%;}
+}
+@-o-keyframes imgView {
     from {}
     to{max-width: 90%;}
 }
@@ -189,6 +245,8 @@ body {
         font-size: 300%;
         opacity: 1;
         -webkit-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
+        -moz-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
+        -o-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
         visibility: visible;
     }
 
@@ -204,6 +262,8 @@ body {
         font-size: 250%;
         opacity: 1;
         -webkit-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
+        -moz-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
+        -o-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
         visibility: visible;
     }
 
@@ -215,6 +275,8 @@ body {
 
     #mainContent .image {
         -webkit-transform: scale(0.8);
+        -moz-transform: scale(0.8);
+        -o-transform: scale(0.8);
         top: 20%;
     }
 }
@@ -224,6 +286,8 @@ body {
         font-size: 200%;
         opacity: 1;
         -webkit-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
+        -moz-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
+        -o-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
         visibility: visible;
     }
 
@@ -234,6 +298,8 @@ body {
     }
     #mainContent .image {
         -webkit-transform: scale(0.7);
+        -moz-transform: scale(0.7);
+        -o-transform: scale(0.7);
         top: 20%;
     }
 }
@@ -243,6 +309,8 @@ body {
         font-size: 150%;
         opacity: 1;
         -webkit-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
+        -moz-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
+        -o-transition: opacity 500ms ease-in-out, font-size 50ms ease-in-out;
         visibility: visible;
     }
 
@@ -253,6 +321,8 @@ body {
     }
     #mainContent .image {
         -webkit-transform: scale(0.6);
+        -moz-transform: scale(0.6);
+        -o-transform: scale(0.6);
         top: 20%;
     }
 }
