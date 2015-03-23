@@ -34,10 +34,10 @@ body {
     opacity: 0;
     margin: 0.15em auto;
     -webkit-animation: blink 1ms 2500 linear;
+    -moz-animation: blink 1ms 2500 linear;
+    -o-animation: blink 1ms 2500 linear;
     -webkit-transition: opacity 500ms ease-in-out, font-size 500ms ease-in-out 500ms;
-    -moz-animation: blink 1ms 2500 linear;
-    -o-transition: opacity 500ms ease-in-out, font-size 500ms ease-in-out 500ms;
-    -moz-animation: blink 1ms 2500 linear;
+    -moz-transition: opacity 500ms ease-in-out, font-size 500ms ease-in-out 500ms;
     -o-transition: opacity 500ms ease-in-out, font-size 500ms ease-in-out 500ms;
     left: 20%;
     right: 20%;
@@ -105,7 +105,7 @@ body {
 .menu ul li {
     opacity: 0.5;
     zoom: normal;
-    padding: 30px 0px;
+    padding: 30px 0;
     -webkit-transition: opacity 350ms ease-in-out, list-style-image 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
     -moz-transition: opacity 350ms ease-in-out, list-style-image 350ms ease-in-out, -moz-transform 350ms ease-in-out;
     -o-transition: opacity 350ms ease-in-out, list-style-image 350ms ease-in-out, -o-transform 350ms ease-in-out;
@@ -128,7 +128,7 @@ body {
 }
 
 @-o-keyframes rotation {
-    from {o-transform: rotateY(0deg);}
+    from {-o-transform: rotateY(0deg);}
     to {-o-transform: rotateY(360deg);}
 }
 

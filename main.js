@@ -1,13 +1,13 @@
 var currentTitle = '';
 var clicked = false;
 
-$(document).ready(function(){
+$(document).ready(function () {
     init();
     clickMenuItem();
     loadImages();
 
-    $('.photoGrid img').click(function(){
-        if(!clicked) {
+    $('.photoGrid img').click(function () {
+        if (!clicked) {
             $(this).addClass('imageInc');
             $('body').css('overflow', 'visible');
             clicked = true;
@@ -19,35 +19,35 @@ $(document).ready(function(){
     });
 });
 
-function init(){
-    $('body').css('opacity','1');
+function init() {
+    $('body').css('opacity', '1');
     setTitle('main');
     $('#mainContent').addClass('contentVisible');
-    $('.header').css('height',$('.wrapper .header #' + currentTitle).outerHeight(true) + 'px');
+    $('.header').css('height', $('.wrapper .header #' + currentTitle).outerHeight(true) + 'px');
 }
 
 function loadImages() {
-    for (var i = 1; i <= 10; i++){
-        $('.photoElement').prepend('<img src="resources\\photos\\'+ i +'.jpg">')
+    for (var i = 1; i <= 10; i++) {
+        $('.photoElement').prepend('<img src="resources\\photos\\' + i + '.jpg">')
     }
 }
 
-function setTitle(titleID){
+function setTitle(titleID) {
     currentTitle = titleID;
     $('.wrapper .header #' + titleID).addClass('visibleTitle');
 }
 
-function clickMenuItem(){
+function clickMenuItem() {
 
-    $('.wrapper .header').click(function(){
-        $('body').animate({ scrollTop: 0 }, 'slow');
+    $('.wrapper .header').click(function () {
+        $('body').animate({scrollTop: 0}, 'slow');
         removeTitle(currentTitle);
         $('#' + currentTitle + 'Content').removeClass('contentVisible');
         init();
     });
 
-    $('.wrapper .menu ul li').click(function(){
-        $('body').animate({ scrollTop: 0 }, 'slow');
+    $('.wrapper .menu ul li').click(function () {
+        $('body').animate({scrollTop: 0}, 'slow');
         $(this).removeClass('rotate');
         $('#' + currentTitle + 'Content').removeClass('contentVisible');
         $('#' + $(this).attr('class') + 'Content').addClass('contentVisible');
@@ -64,10 +64,6 @@ function clickMenuItem(){
     });
 }
 
-function removeTitle(titleID){
+function removeTitle(titleID) {
     $('.wrapper .header #' + titleID).removeClass('visibleTitle');
 }
-
-/**
- * Created by Ivan_Iankovskyi on 3/18/2015.
- */
